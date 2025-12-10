@@ -64,11 +64,6 @@ const init = () => {
       const freq = randomFrequency();
       cell.dataset.freq = String(freq);
 
-      const label = document.createElement("span");
-      label.className = "freq-label";
-      label.textContent = `${freq} Hz`;
-
-      cell.append(label);
       grid.append(cell);
       startCellFlicker(cell, freq);
     }

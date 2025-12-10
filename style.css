@@ -24,9 +24,12 @@ body {
 
 .page {
   min-height: 100vh;
-  padding: 24px clamp(12px, 2vw, 28px) 32px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 16px clamp(12px, 2vw, 20px) 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .header {
@@ -108,15 +111,19 @@ button:active {
 }
 
 .grid-wrap {
-  margin-top: 20px;
+  flex: 1;
+  display: flex;
 }
 
 .grid {
   --cols: 5;
+  flex: 1;
+  height: calc(100vh - 170px);
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
   gap: var(--gap);
   width: 100%;
+  min-height: 0;
 }
 
 .cell {
@@ -134,12 +141,6 @@ button:active {
   background: #000;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.freq-label {
-  padding: 4px 8px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 6px;
 }
 
 @media (max-width: 600px) {
